@@ -1,0 +1,10 @@
+INSERT INTO formula1 ('team_name') VALUES ('Mclaren');
+INSERT INTO formula1 ('team_name') VALUES ('Ferrari');
+INSERT INTO formula1 ('team_name') VALUES ('RedBull');
+INSERT INTO formula1 ('team_name') VALUES ('Mercedes');
+INSERT INTO formula1 ('team_name') VALUES ('AstonMartin');
+INSERT INTO formula1 ('team_name') VALUES ('Alpine');
+INSERT INTO formula1 ('team_name') VALUES ('Haas');
+INSERT INTO formula1 ('team_name') VALUES ('VCARB');
+INSERT INTO formula1 ('team_name') VALUES ('Williams');
+INSERT INTO formula1 ('team_name') VALUES ('KickSauber');
