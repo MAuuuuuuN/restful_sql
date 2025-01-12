@@ -1,0 +1,15 @@
+#re_get_teams {
+  margin-bottom: 16px;
+}
+
+input[type='text'] {
+  width: 200px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr * {
+  border: 1px solid;
+}

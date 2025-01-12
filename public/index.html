@@ -3,9 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>F1チーム</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./jquery-3.7.1.min.js"></script>
 </head>
 <body>
-  HTMLテスト
+  <div>
+    <h1>チーム一覧</h1>
+    <button id="re_get_teams">再取得</button>
+    <div id="team_table">
+      <table>
+        <caption>F1チーム</caption>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>チーム名</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div>
+    <h1>チーム取得</h1>
+    <form id="get_team">
+      <input class="value" type="text" placeholder="取得するチームのIDを入力">
+      <button>送信</button>
+    </form>
+  </div>
+  
+  <div>
+    <h1>チーム追加</h1>
+    <form id="add_team">
+      <input class="value" type="text" placeholder="追加するチーム名を入力">
+      <button>送信</button>
+    </form>
+  </div>
+  
+  <div>
+    <h1>チーム変更</h1>
+    <form id="change_team">
+      <input class="value id" type="text" placeholder="変更するチームのIDを入力">
+      <input class="value name" type="text" placeholder="変更後のチーム名を入力">
+      <button>送信</button>
+    </form>
+  </div>
+  
+  <div>
+    <h1>チーム撤退</h1>
+    <form id="withdraw_team">
+      <input class="value" type="text" placeholder="削除するチームのIDを入力">
+      <button>送信</button>
+    </form>
+  </div>
+
+  <script src="./app.js"></script>
+
 </body>
 </html>
