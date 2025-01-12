@@ -33,7 +33,7 @@ $('#get_team button').on('click', async function(event) {
   const request_url = `http://localhost:3000/api/formula1_teams/${get_team}`;
 
   if(get_team === ''){
-    alert(`内容を取得するには下記の要素を入力してください\n・ID`)
+    alert(`内容を取得するには下記の要素を入力してください\n・ID`);
     return;
   }
 
@@ -65,7 +65,7 @@ $('#add_team button').on('click', async function(event) {
   };
 
   if(add_team === '') {
-    alert(`内容を追加するには下記の要素を入力してください\n・チーム名`)
+    alert(`内容を追加するには下記の要素を入力してください\n・チーム名`);
     return;
   }
 
@@ -137,7 +137,7 @@ $('#withdraw_team button').on('click', async function(event) {
   };
 
   if(withdraw_team === '') {
-    alert(`内容を追加するには下記の要素を入力してください\n・ID`)
+    alert(`内容を追加するには下記の要素を入力してください\n・ID`);
     return;
   }
 
