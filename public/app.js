@@ -32,6 +32,11 @@ $('#get_team button').on('click', async function(event) {
   const get_team = $('#get_team .value').val();
   const request_url = `http://localhost:3000/api/formula1_teams/${get_team}`;
 
+  if(get_team === ''){
+    alert(`内容を取得するには下記の要素を入力してください\n・ID`)
+    return;
+  }
+
   try {
     const team = await fetch(request_url);
     const res_team = await team.json();
@@ -59,6 +64,11 @@ $('#add_team button').on('click', async function(event) {
     })
   };
 
+  if(add_team === '') {
+    alert(`内容を追加するには下記の要素を入力してください\n・チーム名`)
+    return;
+  }
+
   try{
     await fetch(request_url, post_team);
 
@@ -85,6 +95,26 @@ $('#change_team button').on('click', async function(event) {
       "team_name": change_team_name,
     })
   };
+  const empties = [];
+
+  if(change_team_id === ''){
+    empties.push('ID');
+  }
+
+  if(change_team_name === ''){
+    empties.push('チーム名');
+  }
+
+  if(empties.length > 0) {
+    const empty_list = empties.map(empty => 
+      `\n・${empty}`
+    ).join('');
+    const error_message = `内容を変更するには下記の要素を入力してください${empty_list}`;
+
+    alert(error_message);
+
+    return;
+  }
 
   try{
     await fetch(request_url, put_team);
@@ -104,6 +134,11 @@ $('#withdraw_team button').on('click', async function(event) {
   const request_url = `http://localhost:3000/api/formula1_teams/${withdraw_team}`;
   const delete_team = {
     method: 'DELETE',
+  };
+
+  if(withdraw_team === '') {
+    alert(`内容を追加するには下記の要素を入力してください\n・ID`)
+    return;
   }
 
   try{

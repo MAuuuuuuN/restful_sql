@@ -8,7 +8,6 @@ app.listen(3000, console.log("サーバーが開始されました")); // サー
 
 // ページの表示
 app.get("/", (req, res) => {
-  // res.send("サーバー動作中");
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
