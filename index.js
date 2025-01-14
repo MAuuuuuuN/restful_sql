@@ -1,9 +1,9 @@
-const express = require("express"); // expressを使用
-const path = require("path");
-const app = express(); // expressを定義
-const mysql = require('mysql2');
+const express = require("express"); // Expressを使用
+const path = require("path"); // パスを扱う
+const app = express(); // Expressインスタンスを作成
+const mysql = require('mysql2'); // Node.jsでMySQLを操作するライブラリ
 
-app.use(express.json());
+app.use(express.json()); // HTTPリクエストをJSONとして解析して、bodyで利用可能にする
 app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(3000, console.log("サーバーが開始されました")); // サーバー起動時のメッセージ
@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+// データベース接続時の情報
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -20,6 +21,7 @@ const db = mysql.createConnection({
   database: 'restful_api'
 });
 
+// データベース接続
 db.connect(error => {
   if(error) {
     console.log('MySQL接続時にエラーが発生しました。: ', error);
