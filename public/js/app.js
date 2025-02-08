@@ -1,3 +1,4 @@
+// テスト
 function format_team(res_team) {
   const teams = Array.isArray(res_team) ? res_team : [res_team];
   const team_table = teams.map(team => `
